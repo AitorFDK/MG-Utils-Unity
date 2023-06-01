@@ -50,5 +50,35 @@ namespace MendiGames.Utils
         public static Vector2 xz (this Vector3 v) => new Vector2(v.x, v.z);
         public static Vector2 yx (this Vector3 v) => new Vector2(v.y, v.x);
         public static Vector2 yz (this Vector3 v) => new Vector2(v.y, v.z);
+        
+        /* --------------------------- TEXTURE EXTENSIONS --------------------------- */
+        
+        public static Texture2D[] SpliceTexture(Texture2D t, int subdivisions)
+        {
+            Texture2D[] textures = new Texture2D[subdivisions * subdivisions];
+
+            int spliceWidth = t.width / subdivisions;
+            int spliceHeight = t.height / subdivisions;
+            int nTextures = 0;
+
+            for (int j = subdivisions - 1; j >= 0; j--)
+            {
+                for (int i = 0; i < subdivisions; i++)
+                {
+                    Color[] colors = t.GetPixels((i) * spliceWidth, (j) * spliceHeight, spliceWidth, spliceHeight);
+
+                    Texture2D aux = new Texture2D(spliceWidth, spliceHeight);
+                    aux.name = nTextures.ToString();
+                    aux.SetPixels(colors);
+                    aux.Apply();
+
+                    textures[nTextures] = aux;
+
+                    nTextures++;
+                }
+            }
+
+            return textures;
+        }
     }
 }
