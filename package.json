@@ -1,0 +1,11 @@
+{
+    "name": "com.mendigames.utils-unity",
+    "version": "1.0.0",
+    "displayName": "Unity Utils",
+    "description": "Unity library of utils for everyone ",
+    "unity": "2019.3",
+    "author": {
+      "name": "Aitor López (Mendi Games)",
+      "url": "https://www.mendigames.com"
+    }
+  }
