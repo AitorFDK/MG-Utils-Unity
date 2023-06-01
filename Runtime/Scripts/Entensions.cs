@@ -53,7 +53,7 @@ namespace MendiGames.Utils
         
         /* --------------------------- TEXTURE EXTENSIONS --------------------------- */
         
-        public static Texture2D[] SpliceTexture(Texture2D t, int subdivisions)
+        public static Texture2D[] SpliceTexture(this Texture2D t, int subdivisions)
         {
             Texture2D[] textures = new Texture2D[subdivisions * subdivisions];
 
