@@ -1,6 +1,6 @@
 {
     "name": "com.mendigames.utilsunity",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Unity Utils",
     "description": "Unity library of utils for everyone ",
     "unity": "2019.3",
