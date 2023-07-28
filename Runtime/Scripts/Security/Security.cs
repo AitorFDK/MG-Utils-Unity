@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MendiGames.Utils
+namespace MendiGames.SecurityUtils
 {
     public class Security
     {
