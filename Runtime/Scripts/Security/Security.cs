@@ -10,13 +10,6 @@ namespace MendiGames.SecurityUtils
             return GenerateSaltedHash(Encoding.UTF8.GetBytes(value), salt);
         }
 
-        public static byte[] GenerateRandomSalt()
-        {
-            byte[] salt = new byte[32];
-            RandomNumberGenerator.Fill(salt);
-            return salt;
-        }
-
         private static byte[] GenerateSaltedHash(byte[] plainText, byte[] salt)
         {
             HashAlgorithm crypto = new SHA256Managed();
